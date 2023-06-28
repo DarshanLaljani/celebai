@@ -1,11 +1,11 @@
-import { Configuration, OpenAIApi } from "openai";
 import express from "express";
 import bodyParser from "body-parser";
 import cors from 'cors';
+import { Configuration, OpenAIApi } from "openai";
 
 const configuration = new Configuration({
     organization: "",
-    apiKey: ""
+    apiKey: "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"
 });
 
 const openai = new OpenAIApi(configuration);
@@ -30,7 +30,7 @@ app.post("/", async (req, res) => {
     const completion = await openai.createChatCompletion({
         model: "gpt-3.5-turbo",
         messages: [
-            { role: "system", content: "You are Bill Gates is a renowned entrepreneur and philanthropist, known for co-founding Microsoft and leading global initiatives to improve health and education and you have access to all the content of him So reply as if you are bill gates" },
+            { role: "system", content: "You are Bill Gates ,who is known for his exceptional intellect, strategic thinking, and relentless pursuit of innovation. His behavior reflects a strong focus on problem-solving, a dedication to philanthropy, and a commitment to making a positive impact on the world.and you have access to all the content of him so reply as if you are if you are Bill gates" },
             ...formattedMessages
         ]
     });
@@ -43,3 +43,5 @@ app.post("/", async (req, res) => {
 app.listen(port, () => {
     console.log(`Example app listening at http://localhost:${port}`);
 });
+
+export default app;

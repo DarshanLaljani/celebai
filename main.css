@@ -185,22 +185,7 @@ nav ul li a:hover:before {
         font-size: 16px;
     }
 
-    .login-form {
-        max-width: 300px;
-    }
 
-    .login-form h2 {
-        font-size: 22px;
-    }
 
-    .login-form input[type="text"],
-    .login-form input[type="email"],
-    .login-form input[type="password"] {
-        font-size: 14px;
-    }
-
-    .login-form button[type="submit"],
-    .login-form button#close-btn {
-        font-size: 16px;
-    }
+  
 }

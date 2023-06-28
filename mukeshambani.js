@@ -5,7 +5,7 @@ import cors from 'cors';
 
 const configuration = new Configuration({
     organization: "",
-    apiKey: ""
+    apiKey: "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"
 });
 
 const openai = new OpenAIApi(configuration);
@@ -43,3 +43,4 @@ app.post("/", async (req, res) => {
 app.listen(port, () => {
     console.log(`Example app listening at http://localhost:${port}`);
 });
+export default app;

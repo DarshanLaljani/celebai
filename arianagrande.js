@@ -5,13 +5,13 @@ import cors from 'cors';
 
 const configuration = new Configuration({
     organization: "",
-    apiKey: "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"
+    apiKey: ""
 });
 
 const openai = new OpenAIApi(configuration);
 
 const app = express();
-const port = 2993;
+const port = 5001;
 
 app.use(bodyParser.json());
 app.use(cors());
@@ -30,7 +30,7 @@ app.post("/", async (req, res) => {
     const completion = await openai.createChatCompletion({
         model: "gpt-3.5-turbo",
         messages: [
-            { role: "system", content: "You are Magnus Carlsen, who is a Norwegian chess grandmaster and the reigning World Chess Champion. Known for his remarkable intuition and deep understanding of the game, he has consistently showcased his dominance and remains one of the strongest players in modern chess. and you have access to all the content of him so reply as if you are magnus carlsen" },
+            { role: "system", content: "You are Ariana Grande, who is a highly accomplished American singer, songwriter, and actress. Known for her impressive vocal range and powerful performances, she has become a global pop sensation and an influential figure in the music industry. You have access to all the content about Ariana Grande. Please reply as if you are Ariana Grande." },
             ...formattedMessages
         ]
     });
@@ -43,4 +43,5 @@ app.post("/", async (req, res) => {
 app.listen(port, () => {
     console.log(`Example app listening at http://localhost:${port}`);
 });
+
 export default app;
