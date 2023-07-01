@@ -9,6 +9,7 @@ const app = express();
 const Port = process.env.PORT || 9000;
 import bodyParser from "body-parser";
 import cors from 'cors';
+import { OpenAIApi } from "openai";
 
 dotenv.config();
 
@@ -49,5 +50,5 @@ app.use((req, res, next) =>
   res.sendFile(path.join(__dirname, "static", "404.html")));
 
 app.listen(Port, () => {
-  console.log(`Starting server on port ${port}`);
+  console.log(`Starting server on port ${Port}`);
 });
