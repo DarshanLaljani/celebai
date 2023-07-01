@@ -55,7 +55,7 @@
             messageInput.value = '';
 
             try {
-                const response = await fetch('http://localhost:5006', {
+                const response = await fetch('/drake', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',

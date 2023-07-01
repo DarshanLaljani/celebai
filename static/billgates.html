@@ -55,7 +55,7 @@
             messageInput.value = '';
 
             try {
-                const response = await fetch('http://localhost:5002', {
+                const response = await fetch('/billgates', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',

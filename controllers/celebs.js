@@ -2,15 +2,16 @@ import { Configuration, OpenAIApi } from "openai";
 
 const configuration = new Configuration({
     organization: "",
-    apiKey: "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"
+    apiKey: process.env.OPENAI_API_KEY
 });
 
 const openai = new OpenAIApi(configuration);
 
 
+
 const amitabhbachan = async (req, res) => {
     const { messages } = req.body;
-    console.log(messages);
+    
 const formattedMessages = messages.map((message) => {
     return {
         role: "user",
@@ -32,7 +33,7 @@ res.json({
 };
 const arianagrande = async (req, res) => {
     const { messages } = req.body;
-    console.log(messages);
+    
 
     const formattedMessages = messages.map((message) => {
         return {
@@ -55,7 +56,7 @@ const arianagrande = async (req, res) => {
 };
 const billgates = async (req, res) => {
     const { messages } = req.body;
-    console.log(messages);
+    
 
     const formattedMessages = messages.map((message) => {
         return {
@@ -78,7 +79,7 @@ const billgates = async (req, res) => {
 };
 const carryminati = async (req, res) => {
     const { messages } = req.body;
-    console.log(messages);
+    
 
     const formattedMessages = messages.map((message) => {
         return {
@@ -101,7 +102,7 @@ const carryminati = async (req, res) => {
 };
 const deepikapad = async (req, res) => {
     const { messages } = req.body;
-    console.log(messages);
+    
 
     const formattedMessages = messages.map((message) => {
         return {
@@ -125,7 +126,7 @@ const deepikapad = async (req, res) => {
 
 const dhruvrathee = async (req, res) => {
     const { messages } = req.body;
-    console.log(messages);
+    
 
     const formattedMessages = messages.map((message) => {
         return {
@@ -149,7 +150,7 @@ const dhruvrathee = async (req, res) => {
 
 const drake = async (req, res) => {
     const { messages } = req.body;
-    console.log(messages);
+    
 
     const formattedMessages = messages.map((message) => {
         return {
@@ -173,7 +174,7 @@ const drake = async (req, res) => {
 
 const dwaynejohnson = async (req, res) => {
     const { messages } = req.body;
-    console.log(messages);
+    
 
     const formattedMessages = messages.map((message) => {
         return {
@@ -196,7 +197,7 @@ const dwaynejohnson = async (req, res) => {
 };
 const edsheeran = async (req, res) => {
     const { messages } = req.body;
-    console.log(messages);
+    
 
     const formattedMessages = messages.map((message) => {
         return {
@@ -219,7 +220,7 @@ const edsheeran = async (req, res) => {
 };
 const elonmusk = async (req, res) => {
     const { messages } = req.body;
-    console.log(messages);
+    
 
     const formattedMessages = messages.map((message) => {
         return {
@@ -242,7 +243,7 @@ const elonmusk = async (req, res) => {
 };
  const honeysingh = async (req, res) => {
     const { messages } = req.body;
-    console.log(messages);
+    
 
     const formattedMessages = messages.map((message) => {
         return {
@@ -265,7 +266,7 @@ const elonmusk = async (req, res) => {
 };
 const justinbeiber = async (req, res) => {
     const { messages } = req.body;
-    console.log(messages);
+    
 
     const formattedMessages = messages.map((message) => {
         return {
@@ -288,7 +289,7 @@ const justinbeiber = async (req, res) => {
 };
 const magnuscarl = async (req, res) => {
     const { messages } = req.body;
-    console.log(messages);
+    
 
     const formattedMessages = messages.map((message) => {
         return {
@@ -311,7 +312,7 @@ const magnuscarl = async (req, res) => {
 };
 const mrbeast = async (req, res) => {
     const { messages } = req.body;
-    console.log(messages);
+    
 
     const formattedMessages = messages.map((message) => {
         return {
@@ -335,7 +336,7 @@ const mrbeast = async (req, res) => {
 
 const msdhoni = async (req, res) => {
     const { messages } = req.body;
-    console.log(messages);
+    
 
     const formattedMessages = messages.map((message) => {
         return {
@@ -358,7 +359,7 @@ const msdhoni = async (req, res) => {
 };
 const mukeshambani = async (req, res) => {
     const { messages } = req.body;
-    console.log(messages);
+    
 
     const formattedMessages = messages.map((message) => {
         return {
@@ -381,7 +382,7 @@ const mukeshambani = async (req, res) => {
 };
 const pewdiepie =  async (req, res) => {
     const { messages } = req.body;
-    console.log(messages);
+    
 
     const formattedMessages = messages.map((message) => {
         return {
@@ -404,7 +405,7 @@ const pewdiepie =  async (req, res) => {
 };
 const ratantata = async (req, res) => {
     const { messages } = req.body;
-    console.log(messages);
+    
 
     const formattedMessages = messages.map((message) => {
         return {
@@ -428,7 +429,7 @@ const ratantata = async (req, res) => {
 
 const ronaldo = async (req, res) => {
     const { messages } = req.body;
-    console.log(messages);
+    
 
     const formattedMessages = messages.map((message) => {
         return {
@@ -451,7 +452,7 @@ const ronaldo = async (req, res) => {
 };
 const salmankhan = async (req, res) => {
     const { messages } = req.body;
-    console.log(messages);
+    
 
     const formattedMessages = messages.map((message) => {
         return {
@@ -474,7 +475,7 @@ const salmankhan = async (req, res) => {
 };
 const shahrukhkhan =  async (req, res) => {
     const { messages } = req.body;
-    console.log(messages);
+    
 
     const formattedMessages = messages.map((message) => {
         return {
@@ -498,7 +499,7 @@ const shahrukhkhan =  async (req, res) => {
 
 const stevejobs = async (req, res) => {
     const { messages } = req.body;
-    console.log(messages);
+    
 
     const formattedMessages = messages.map((message) => {
         return {
@@ -521,7 +522,7 @@ const stevejobs = async (req, res) => {
 };
 const tanmaybhat = async (req, res) => {
     const { messages } = req.body;
-    console.log(messages);
+    
 
     const formattedMessages = messages.map((message) => {
         return {
@@ -544,7 +545,7 @@ const tanmaybhat = async (req, res) => {
 };
 const viratkohli = async (req, res) => {
     const { messages } = req.body;
-    console.log(messages);
+    
 
     const formattedMessages = messages.map((message) => {
         return {
@@ -567,7 +568,7 @@ const viratkohli = async (req, res) => {
 };
 const vishyanand = async (req, res) => {
     const { messages } = req.body;
-    console.log(messages);
+    
 
     const formattedMessages = messages.map((message) => {
         return {
@@ -588,7 +589,7 @@ const vishyanand = async (req, res) => {
         completion: completion.data.choices[0].message
     });
 };
- export default{
+ export default {
     amitabhbachan, arianagrande,
   billgates,     carryminati,
   deepikapad,    dhruvrathee,
