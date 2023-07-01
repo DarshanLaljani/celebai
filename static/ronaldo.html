@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cristiano Ronaldo</title>
+    <link rel="icon" href="ronaldo.jpg" type="image/png">
+    <link rel="stylesheet" href="newchat.css" />
+    <style> 
+        .message--assistant .message__icon {
+            background-color: #d1aff8;
+            background-image: url("ronaldo.jpg");
+            background-size: cover;
+        }
+       </style> 
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-box">
+            <main>
+                <button class="back-button">Back</button>
+                <div class="chat-log">
+                    <div id="chat-log"></div>
+                </div>
+                <form id="chat-form">
+                    <div class="message-input-container">
+                        <input type="text" id="message-input" placeholder="Ask something to Cristiano Ronaldo...">
+                        <button type="submit">Send</button>
+                    </div>
+                </form>
+            </main>
+        </div>
+        <div class="assistant-details">
+            <img src="ronaldo.jpg" alt="ronaldo">
+            <div class="assistant-details-box">
+                <h2>Cristiano Ronaldo</h2>
+                <p>Cristiano Ronaldo is a Portuguese professional footballer regarded as one of the greatest players of all time. With his incredible athleticism, skill, and goal-scoring prowess, he has achieved numerous accolades, including multiple FIFA Player of the Year awards.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const chatLog = document.getElementById('chat-log');
+        const messageInput = document.getElementById('message-input');
+        const chatForm = document.querySelector('#chat-form');
+        const backButton = document.querySelector('.back-button');
+
+        chatForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const messageText = messageInput.value;
+            if (!messageText.trim()) return;
+
+            appendMessage('user', messageText);
+            messageInput.value = '';
+
+            try {
+                const response = await fetch('http://localhost:2992', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ messages: [messageText] }),
+                });
+
+                const data = await response.json();
+                const completion = data.completion;
+                appendMessage('assistant', completion.content);
+            } catch (error) {
+                console.error(error);
+            }
+        });
+
+        function appendMessage(role, content) {
+    const messageElement = document.createElement('div');
+    messageElement.classList.add('message');
+    messageElement.classList.add(`message--${role}`);
+
+    const formattedContent = content
+        .replace(/\n/g, '<br>') // Replace newlines with line breaks
+        .replace(/(?:\r\n|\r|\n)/g, '<br>') // Replace line breaks with line breaks
+
+    messageElement.innerHTML = `
+        <div class="message__icon"></div>
+        <div class="message__text">${formattedContent}</div>
+    `;
+    chatLog.appendChild(messageElement);
+    chatLog.scrollTop = chatLog.scrollHeight;
+}
+        backButton.addEventListener('click', () => {
+            window.location.href = 'sports.html'; 
+        });
+    </script>
+</body>
+</html>

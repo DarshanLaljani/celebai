@@ -1,0 +1,136 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Global styles */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+  }
+  
+  .container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 40px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1, h2, p {
+    margin-bottom: 10px;
+  }
+  
+  h1 {
+    font-size: 26px;
+    text-align: center;
+  }
+  
+  h2 {
+    font-size: 23px;
+    text-align: center;
+  }
+  
+  p {
+    font-size: 16px;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  /* Header styles */
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .back-button {
+    font-size: 16px;
+    color: #000000;
+    text-decoration: none;
+    margin-right: 10px;
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    border-radius: 13px;
+    font-weight: 500;
+  }
+  
+  .back-button:hover {
+    text-decoration: underline;
+  }
+  
+  .social-links a {
+    display: inline-block;
+    margin-left: 20px;
+  }
+  .social-links img{
+    width: 40px;
+    height: 40px;
+  }
+  /* Main styles */
+  .main-content {
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .profile-image {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .profile-image img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+  }
+  
+  /* Animation styles */
+  .about-me {
+    animation: fade-in 1s ease-in-out;
+  }
+  
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive styles */
+  @media screen and (max-width: 768px) {
+    h1 {
+      font-size: 22px;
+    }
+  
+    h2 {
+      font-size: 20px;
+    }
+  
+    p {
+      font-size: 14px;
+     
+    }
+  
+    .profile-image img {
+      width: 150px;
+      height: 150px;
+    }
+  
+    .social-links a {
+      margin-left: 5px;
+    }
+  }
+  
