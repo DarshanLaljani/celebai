@@ -49,3 +49,5 @@ app.use((req, res, next) =>
 app.listen(Port, () => {
   console.log(`Starting server on port ${Port}`);
 });
+
+export default app;
