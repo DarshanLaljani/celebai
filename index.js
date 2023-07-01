@@ -2,7 +2,6 @@ import express from "express";
 import { fileURLToPath } from "url";
 import path from "path";
 import fs from "fs";
-import dotenv from "dotenv";
 import celebs from "./controllers/celebs.js";
 
 const app = express();
@@ -10,8 +9,6 @@ const Port = process.env.PORT || 9000;
 import bodyParser from "body-parser";
 import cors from 'cors';
 import { OpenAIApi } from "openai";
-
-dotenv.config();
 
 // Get the directory name of the current module
 const __filename = fileURLToPath(import.meta.url);
