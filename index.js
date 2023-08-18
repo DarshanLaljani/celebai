@@ -3,7 +3,16 @@ import { fileURLToPath } from "url";
 import path from "path";
 import fs from "fs";
 import celebs from "./controllers/celebs.js";
-
+import { Analytics } from '@vercel/analytics/react';
+ 
+function MyApp({ Component, pageProps }) {
+  return (
+    <>
+      <Component {...pageProps} />
+      <Analytics />
+    </>
+  );
+}
 const app = express();
 const Port = process.env.PORT || 9000;
 import bodyParser from "body-parser";
